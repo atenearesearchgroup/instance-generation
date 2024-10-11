@@ -1,0 +1,23 @@
+!new Bank('bank4')
+!bank4.country := 'United Kingdom'
+!bank4.name := 'HSBC'
+!bank4.bic := 'HBUKGB4BXXX'
+
+!new Account('account4')
+!account4.iban := 'GB29 NWBK 6016 1331 9268 19'
+!account4.balance := 4500
+
+!new Person('person6')
+!person6.age := 35
+!person6.firstName := 'John'
+!person6.lastName := 'Smith'
+
+!new Person('person7')
+!person7.age := 28
+!person7.firstName := 'Emily'
+!person7.lastName := 'Brown'
+
+!insert (person6, account4) into Ownership
+!insert (person6, account4) into Use
+!insert (person7, account4) into Use
+!insert (bank4, account4) into AccountOfBanks

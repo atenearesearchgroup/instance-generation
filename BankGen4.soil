@@ -1,0 +1,38 @@
+!new Bank('bank10')
+!bank10.country := 'India'
+!bank10.name := 'State Bank of India'
+!bank10.bic := 'SBININBBXXX'
+
+!new Account('account11')
+!account11.iban := 'IN55 0031 0012 3456 7890 1234 567'
+!account11.balance := 4800
+
+!new Account('account12')
+!account12.iban := 'IN44 0032 1234 5678 9012 3456 791'
+!account12.balance := 5100
+
+!new Person('person18')
+!person18.age := 53
+!person18.firstName := 'Amit'
+!person18.lastName := 'Sharma'
+
+!new Person('person19')
+!person19.age := 26
+!person19.firstName := 'Sneha'
+!person19.lastName := 'Verma'
+
+!new Person('person20')
+!person20.age := 37
+!person20.firstName := 'Rajesh'
+!person20.lastName := 'Mehta'
+
+!insert (person18, account11) into Ownership
+!insert (person19, account12) into Ownership
+
+!insert (person18, account11) into Use
+!insert (person19, account12) into Use
+!insert (person20, account11) into Use
+!insert (person20, account12) into Use
+
+!insert (bank10, account11) into AccountOfBanks
+!insert (bank10, account12) into AccountOfBanks

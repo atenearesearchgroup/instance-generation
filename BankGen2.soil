@@ -1,0 +1,32 @@
+!new Bank('bank9')
+!bank9.country := 'Brazil'
+!bank9.name := 'Banco do Brasil'
+!bank9.bic := 'BRASBRRXXXX'
+
+!new Account('account9')
+!account9.iban := 'BR97 0036 0305 0000 1000 9795 493P 1'
+!account9.balance := 5200
+
+!new Account('account10')
+!account10.iban := 'BR6400360305000010009795493P2'
+!account10.balance := 3600
+
+!new Person('person16')
+!person16.age := 45
+!person16.firstName := 'Carlos'
+!person16.lastName := 'Silva'
+
+!new Person('person17')
+!person17.age := 30
+!person17.firstName := 'Mariana'
+!person17.lastName := 'Ferreira'
+
+!insert (person16, account9) into Ownership
+!insert (person16, account10) into Ownership
+
+!insert (person16, account9) into Use
+!insert (person16, account10) into Use
+!insert (person17, account10) into Use
+
+!insert (bank9, account9) into AccountOfBanks
+!insert (bank9, account10) into AccountOfBanks

@@ -1,0 +1,38 @@
+!new Bank('bank11')
+!bank11.country := 'South Africa'
+!bank11.name := 'First National Bank'
+!bank11.bic := 'FIRNZAJJXXX'
+
+!new Account('account13')
+!account13.iban := 'ZA23 1234 5678 9012 3456 7890 123'
+!account13.balance := 7000
+
+!new Account('account14')
+!account14.iban := 'ZA45 6789 0123 4567 8901 2345 678'
+!account14.balance := 2600
+
+!new Person('person21')
+!person21.age := 60
+!person21.firstName := 'Thabo'
+!person21.lastName := 'Mbeki'
+
+!new Person('person22')
+!person22.age := 33
+!person22.firstName := 'Naledi'
+!person22.lastName := 'Peters'
+
+!new Person('person23')
+!person23.age := 29
+!person23.firstName := 'Jabulani'
+!person23.lastName := 'Ngcobo'
+
+!insert (person21, account13) into Ownership
+!insert (person22, account14) into Ownership
+
+!insert (person21, account13) into Use
+!insert (person23, account13) into Use
+!insert (person22, account14) into Use
+!insert (person23, account14) into Use
+
+!insert (bank11, account13) into AccountOfBanks
+!insert (bank11, account14) into AccountOfBanks

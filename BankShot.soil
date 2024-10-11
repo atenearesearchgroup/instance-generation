@@ -1,0 +1,14 @@
+!new Bank('bank1')
+!bank1.country := 'Spain'
+!bank1.name := 'ING'
+!bank1.bic := 'INGESMMXXX'
+!new Account('account1')
+! account1.iban := '1234 5678 1234 5678'
+! account1.balance := 1200
+!new Person('person1')
+!person1.age := 21
+!person1.firstName := 'Sarah'
+!person1.lastName := 'Johnson'
+!insert (person1, account1) into Ownership
+!insert (person1, account1) into Use
+!insert (bank1, account1) into AccountOfBanks
